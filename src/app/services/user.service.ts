@@ -16,10 +16,8 @@ export class UserService {
   }
 
   getOne(id: number): Observable<User> {
-    let users = USERS;
-    let user = users.find( (u) => u.id == id );
+    const users = USERS;
+    const user = users.find((u) => u.id === id);
     return of(user).pipe(delay(1000));
   }
-
-  
 }

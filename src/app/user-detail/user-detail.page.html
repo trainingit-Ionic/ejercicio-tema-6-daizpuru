@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle del usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Datos del usuario</ion-card-subtitle>
+      <ion-card-title>{{ user?.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Compañía: {{ user?.company.name }} / {{ user?.company.catchPhrase }}</h2>
+      <br/>
+      <h3>Dirección: {{ user?.address.street }}, {{user?.address.suite}}, {{user?.address.zipcode}} : {{user?.address.city}}</h3>
+      <h3>Correo electrónico: {{ user?.email }}</h3>
+      <h3>Teléfono: {{ user?.phone }}</h3>
+      <h3>Nombre de usuario: {{ user?.username }}</h3>
+      <h3>Página web: <a href="http://www.{{ user?.website }}" target="_blank">{{ user?.website }}</a> </h3>
+      <br/>
+      <ion-button (click)="llamarUsuario()">
+        <ion-icon name="call"></ion-icon>
+        Llamar
+      </ion-button>
+      <br/>
+      <ion-button [routerLink]="['/home']">Volver</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

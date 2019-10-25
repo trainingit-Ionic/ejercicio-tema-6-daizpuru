@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { CallNumber } from '@ionic-native/call-number/ngx';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
+  providers: [CallNumber],
   declarations: [HomePage]
 })
 export class HomePageModule {}
